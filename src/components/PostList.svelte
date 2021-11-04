@@ -1,11 +1,15 @@
 <script>
-  export let posts;
+  export let posts = '';
 
   import PostItem from './PostItem.svelte';
 </script>
 
 <div class="container">
-  {#each posts as post (post.id)}
-    <PostItem item={post} />
-  {/each}
+  {#if posts}
+    {#each posts as post (post.id)}
+      <PostItem item={post} />
+    {/each}
+  {:else}
+    <p>Currently there are no posts to show</p>
+  {/if}
 </div>

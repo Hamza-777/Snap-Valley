@@ -47,6 +47,11 @@
         name="img"
         accept="image/*"
       />
+      {#if image}
+        <div class="preview">
+          <img src={image} alt="" />
+        </div>
+      {/if}
     </div>
     <textarea
       type="text"
@@ -76,6 +81,8 @@
   .photo {
     display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     border: 2px solid #333;
     border-radius: 10px;
@@ -87,6 +94,17 @@
     font-size: 19px;
     cursor: pointer;
     font-weight: 600;
+  }
+
+  .photo .preview {
+    width: 75px;
+    height: 75px;
+  }
+
+  .photo .preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .photo:hover {
