@@ -74,6 +74,10 @@
     margin-top: 70px;
   }
 
+  h2 {
+    color: #f33535;
+  }
+
   input[type='file'] {
     display: none;
   }
@@ -84,7 +88,8 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border: 2px solid #333;
+    color: #f33535;
+    border: 2px solid #f33535;
     border-radius: 10px;
     padding: 5px 10px;
     transition: 200ms;
@@ -118,7 +123,8 @@
     padding: 5px 10px;
     border-radius: 10px;
     outline: none;
-    border: 2px solid #333;
+    border: 2px solid #f33535;
     background-color: transparent;
+    color: #fff;
   }
 </style>

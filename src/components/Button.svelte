@@ -11,9 +11,10 @@
     border-radius: 10px;
     border: none;
     outline: none;
-    background-color: #6ddccf;
+    background-color: #f33535;
     cursor: pointer;
     transition: 200ms;
+    color: #fff;
   }
 
   button:hover {
@@ -21,9 +22,10 @@
   }
 
   button:disabled {
-    background-color: #777;
+    background-color: transparent;
     cursor: auto;
-    color: #000;
+    color: #fff;
+    border: 1px solid #fff;
   }
 
   button:disabled:hover {

@@ -28,18 +28,19 @@
 
 <style>
   .card {
-    color: #333;
-    background-color: #fff;
+    color: #fff;
+    background-color: #0f0f0f;
     border-radius: 15px;
     padding: 40px 50px;
     margin: 20px 0;
-    border: 3px solid #333;
+    border: 3px solid #f33535;
   }
 
   .image {
     width: 70%;
-    height: 70%;
     margin: 10px auto;
+    border-radius: 10px;
+    text-align: center;
   }
 
   .image img {
@@ -48,10 +49,11 @@
     object-fit: contain;
     border-radius: 10px;
     cursor: pointer;
+    border: 3px solid #fff;
   }
 
   .text {
-    width: 60%;
+    width: 70%;
     margin: 10px auto;
     font-size: 19px;
     word-wrap: break-word;

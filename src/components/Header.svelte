@@ -9,7 +9,7 @@
   .header {
     width: 100%;
     padding: 10px 20px;
-    background-color: #6ddccf;
+    background-color: #f33535;
     color: #fff;
   }
 
