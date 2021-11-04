@@ -77,15 +77,20 @@
     display: flex;
     gap: 20px;
     cursor: pointer;
-    border: 2px solid #6ddccf;
+    border: 2px solid #333;
     border-radius: 10px;
     padding: 5px 10px;
+    transition: 200ms;
   }
 
   .photo label {
     font-size: 19px;
     cursor: pointer;
     font-weight: 600;
+  }
+
+  .photo:hover {
+    transform: scale(1.1);
   }
 
   textarea {
@@ -95,7 +100,7 @@
     padding: 5px 10px;
     border-radius: 10px;
     outline: none;
-    border: 2px solid #6ddccf;
+    border: 2px solid #333;
     background-color: transparent;
   }
 </style>

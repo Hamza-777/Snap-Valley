@@ -10,12 +10,16 @@
       cls = 'far fa-heart';
     }
   };
+
+  const handleDblClick = (e) => {
+    cls = 'fas fa-heart';
+  };
 </script>
 
 <div class="card">
   {#if item.image}
     <div class="image">
-      <img src={item.image} alt="" />
+      <img src={item.image} on:dblclick={handleDblClick} alt="" />
     </div>
   {/if}
   <p class="text">{item.text}</p>
@@ -33,8 +37,8 @@
   }
 
   .image {
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
     margin: 10px auto;
   }
 
@@ -42,12 +46,15 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    border-radius: 10px;
+    cursor: pointer;
   }
 
   .text {
+    width: 60%;
     margin: 10px auto;
-    text-align: center;
     font-size: 19px;
+    word-wrap: break-word;
   }
 
   i {

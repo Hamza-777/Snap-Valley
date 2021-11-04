@@ -13,11 +13,20 @@
     outline: none;
     background-color: #6ddccf;
     cursor: pointer;
+    transition: 200ms;
+  }
+
+  button:hover {
+    transform: scale(1.1);
   }
 
   button:disabled {
     background-color: #777;
     cursor: auto;
     color: #000;
+  }
+
+  button:disabled:hover {
+    transform: scale(1);
   }
 </style>
