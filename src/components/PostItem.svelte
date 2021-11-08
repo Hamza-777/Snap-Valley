@@ -1,7 +1,10 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
   export let item;
 
   let cls = 'far fa-heart';
+
+  let dispatch = createEventDispatcher();
 
   const handleLikes = (e) => {
     if (cls === 'far fa-heart') {
@@ -14,6 +17,10 @@
   const handleDblClick = (e) => {
     cls = 'fas fa-heart';
   };
+
+  const handleDelete = (e) => {
+    dispatch('on-delete', item.id);
+  };
 </script>
 
 <div class="card">
@@ -23,7 +30,10 @@
     </div>
   {/if}
   <p class="text">{item.text}</p>
-  <i class={cls} on:click={handleLikes} />
+  <div class="like-remove">
+    <i class={cls} id="like" on:click={handleLikes} />
+    <i class="far fa-trash-alt" id="delete" on:click={handleDelete} />
+  </div>
 </div>
 
 <style>
@@ -59,10 +69,23 @@
     word-wrap: break-word;
   }
 
+  .like-remove {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   i {
     cursor: pointer;
-    color: red;
     font-size: 20px;
+  }
+
+  #like {
+    color: red;
+  }
+
+  #delete {
+    color: #fff;
   }
 
   i:hover {

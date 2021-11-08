@@ -27,10 +27,15 @@
   const addPost = (e) => {
     posts = [e.detail, ...posts];
   };
+
+  const deletePost = (e) => {
+    let itemID = e.detail;
+    posts = posts.filter((post) => post.id !== itemID);
+  };
 </script>
 
 <main>
   <Header />
   <PostForm on:new-post={addPost} />
-  <PostList {posts} />
+  <PostList {posts} on:delete-post={deletePost} />
 </main>
