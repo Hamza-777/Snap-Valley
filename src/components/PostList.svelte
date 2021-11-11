@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte';
+  import { fade, scale } from 'svelte/transition';
   export let posts = '';
   import PostItem from './PostItem.svelte';
 
@@ -13,7 +14,9 @@
 <div class="container">
   {#if posts.length}
     {#each posts as post (post.id)}
-      <PostItem item={post} on:on-delete={handleDelete} />
+      <div in:scale out:fade={{ duration: 500 }}>
+        <PostItem item={post} on:on-delete={handleDelete} />
+      </div>
     {/each}
   {:else}
     <p>Currently there are no posts to show</p>
